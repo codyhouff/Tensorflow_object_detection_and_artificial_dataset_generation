@@ -1,0 +1,44 @@
+item {
+  id: 1
+  name: 'dead_end_sign'
+}
+
+item {
+  id: 2
+  name: 'do_not_enter_sign'
+}
+
+item {
+  id: 3
+  name: 'interstate_sign'
+}
+
+item {
+  id: 4
+  name: 'no_u_turn_sign'
+}
+
+item {
+  id: 5
+  name: 'railroad_crossing_sign'
+}
+
+item {
+  id: 6
+  name: 'speed_limit_sign'
+}
+
+item {
+  id: 7
+  name: 'stop_sign'
+}
+
+item {
+  id: 8
+  name: 'street_name_sign'
+}
+
+item {
+  id: 9
+  name: 'yield_sign'
+}

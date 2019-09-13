@@ -1,0 +1,85 @@
+use labelIMG
+
+annotate pictures
+------------------------------------------------------------------------------------------------
+put 10% in test and 90% in train
+
+and put all pictures with xml_to_csv.py \research\object_detection\custom_detection_walmart_food
+------------------------------------------------------------------------------------------------
+C:\Users\00MrK\Documents\program_stuff\models\research\object_detection\custom_detection_calculator> python xml_to_csv.py
+-----------------------------------------------------------------------------------------------
+in generate_tfrecord.py change line 32 to 'name of object' 
+
+or if multiple:
+
+# TO-DO replace this with label map
+def class_text_to_int(row_label):
+    if row_label == 'dead_end_sign':
+        return 1
+    elif row_label == 'do_not_enter_sign':
+        return 2
+    elif row_label == 'interstate_sign':
+        return 3
+    elif row_label == 'no_u_turn_sign':
+        return 4
+    elif row_label == 'railroad_crossing_sign':
+        return 5
+    elif row_label == 'speed_limit_sign':
+        return 6
+    elif row_label == 'stop_sign':
+        return 7
+    elif row_label == 'street_name_sign':
+        return 8
+    elif row_label == 'yield_sign':
+        return 9
+    else:
+        None
+------------------------------------------------------------------------------------------------
+research\object_detection\custom_detection_calculator>  python generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record
+
+research\object_detection\custom_detection_calculator>  python generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=data/test.record
+------------------------------------------------------------------------------------------------
+make sure object-detection.pdtxt is in training file
+change training\object-detection.pdtxt if multiple items
+
+item {
+  id: 1
+  name: 'my_calculator'
+}
+
+item {
+  id: 2
+  name: 'mac_n_cheese'
+}
+-------------------------------------------------------------------------------------------------
+make sure ssd_mobilenet_v1_pets.config is in training file
+
+edit ssd_mobilenet_v1_pets.config:
+
+->   num_classes: 2
+->   fine_tune_checkpoint: "ssd_mobilenet_v1_coco_11_06_2017/model.ckpt"
+->   input_path: "custom_detection_walmart_food/data/train.record"
+->   label_map_path: "custom_detection_walmart_food/training/object-detection.pbtxt"
+->   input_path: "custom_detection_walmart_food/data/test.record"
+->   label_map_path: "custom_detection_walmart_food/training/object-detection.pbtxt"
+->   num_examples: 11421  (this is the number of train pictures)
+-------------------------------------------------------------------------------------------------
+make sure test.record and train.record is in data file
+-------------------------------------------------------------------------------------------------
+make sure the file ssd_mobilenet_v1_coco_11_06_2017 is in object_detection
+-------------------------------------------------------------------------------------------------
+models\research\object_detection> python train.py --logtostderr --train_dir=custom_detection_stop_sign_generated_images/training --pipeline_config_path=custom_detection_stop_sign_generated_images/training/ssd_mobilenet_v1_pets.config
+-------------------------------------------------------------------------------------------------
+C:\Users\00MrK\Documents\program_stuff\models\research\object_detection> tensorboard --logdir=custom_detection_stop_sign_generated_images/training/test_3/
+									tensorboard --logdir=training/test_3/
+-------------------------------------------------------------------------------------------------
+C:\Users\00MrK\Documents\program_stuff\models\research\object_detection> python export_inference_graph.py \    --input_type image_tensor \    --pipeline_config_path custom_detection_stop_sign_generated_images/training/ssd_mobilenet_v1_pets.config \    --trained_checkpoint_prefix custom_detection_stop_sign_generated_images/training/old_test_3/model.ckpt-45464 \    --output_directory stop_sign_generated_images_inference_graph_4
+-------------------------------------------------------------------------------------------------
+C:\Users\00MrK\Documents\program_stuff\models\research\object_detection> jupyter notebook
+
+edit jupyter file:
+
+->  MODEL_NAME = 'stop_sign_generated_images_inference_graph_2'
+->  PATH_TO_LABELS = os.path.join('custom_detection_stop_sign_generated_images/training', 'object-detection.pbtxt')
+->  TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'stop_image{}.jpg'.format(i)) for i in range(1, 11) ]   (optional)
+
