@@ -1,4 +1,4 @@
-# Tensorflow-Street-Sign-Recognition (Automotive-Object-Detection)
+# Tensorflow object detection and artificial dataset generation
 Street Sign recognition using Tensorflows ObjectDetector
 # Motivation
 The motivation for this project lays both personal interest in a better understanding for object detection and academic research. The goal is to develop a foundation for a road-sign-detection (RSD) with the option to add further objects or functions to it. The ultimate goal is to have a useable object detection for the automotive sector.
