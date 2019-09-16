@@ -112,7 +112,7 @@ Elastic distortion is a very interesting alteration of the pictures. As it can b
 
 With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/results_multiple_images.JPG">
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/csv_file_pic3.jpg">
 
 # 2. Neural Networks
 
