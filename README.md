@@ -24,7 +24,16 @@ The motivation for this project lays both personal interest in a better understa
 6. run model on images in jupyter notebook
 7. run model on webcam 
 
-# 0. Setup 
+# 0. Setup
+### Tensorflow-gpu Installation
+
+
+### Find front images
+
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/signs_front_all.JPG">
+
+### Prepare front images
+    
 
 # 1. Generate Training Images and csv file 
 
