@@ -10,7 +10,7 @@ The motivation for this project lays both personal interest in a better understa
 
 # Table of Contents
 
-1. <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow Installation</a><br>
+1. <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
 
 1. Gathering and Analysing Data 
 2. Neural Networks
