@@ -2,7 +2,7 @@
 I reversed engineered the TensorFlow Object Detection API to make it easier to use, much simplier, and added voice. I created a artificial dataset generator which saves 100s of hours by avoiding having to find and label by hand, 1000s of images.
 
 <p align="center">
-  <img src="results/images_for_readme/2_signs_edited2.png">
+  <img width="1555" img src="results/images_for_readme/2_signs_edited2.png">
 </p>
 
 # Motivation
@@ -82,7 +82,7 @@ The Zoom function is rather simple and lays focus on a different part of the pic
 
 Stretch is useable for many different directions. It includes horizontal and vertical shearing as well as shearing to each of the corners. The function augments the data in such way as it would result if another picture was taken seconds later. It also makes the trained model more robust towards different angles.
 
-<img width="1550" alt="bildschirmfoto 2018-11-19 um 12 40 54" src="https://user-images.githubusercontent.com/34514578/48686796-e7500d00-ebf8-11e8-84bc-b5a3cef1b912.png">
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 40 54" src="results/images_for_readme/stretch_two_imgs.JPG">
 
 #### Resize
 
