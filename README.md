@@ -10,7 +10,11 @@ The motivation for this project lays both personal interest in a better understa
 
 # Table of Contents
 
-1. <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
+1. Setup
+* <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
+* Find front images
+* Prepare front images
+
 
 1. Gathering and Analysing Data 
 2. Neural Networks
@@ -113,7 +117,7 @@ Elastic distortion is a very interesting alteration of the pictures. As it can b
 With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
 
 <p align="center">
-  <img width="700" img src="results/images_for_readme/csv_file_pic4.jpg">
+  <img width="900" img src="results/images_for_readme/csv_file_pic4.jpg">
 </p>
 
 # 2. Generate TF records
