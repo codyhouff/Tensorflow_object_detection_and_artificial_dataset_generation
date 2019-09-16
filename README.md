@@ -10,19 +10,23 @@ The motivation for this project lays both personal interest in a better understa
 
 # Table of Contents
 
-1. Setup
+0. Setup
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
     * Find front images
     * Prepare front images
 
 
-1. Gathering and Analysing Data 
-2. Neural Networks
-3. Using Tensorflow
-4. Results
-5. Outlook
+1. Generate Training Images and csv file 
+2. Create TF records
+3. Train 
+4. Tensorboard
+5. Export inference graph
+6. run model on images in jupyter notebook
+7. run model on webcam 
 
-# 1. Gathering and Analysing Data
+# 0. Setup 
+
+# 1. Generate Training Images and csv file 
 
 The first step to take was to define the road signs and objects for the database. The database builds up on the RUB ["German Traffic Sign Database"][1], therefore the objects in the database used in the repository are similar pictures of everyday traffic situations in Germany. In order to build the database that would be able to detect a larger amount of road signs it was necessary to label a much larger number of pictures. The goal was to distinguish between more than 150 road signs, traffic lights and more than 15 physical objects such as pedestrians, cars and motorcycles.
 
