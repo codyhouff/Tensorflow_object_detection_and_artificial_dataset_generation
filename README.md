@@ -88,7 +88,7 @@ Stretch is useable for many different directions. It includes horizontal and ver
 
 Elastic distortion is a very interesting alteration of the pictures. As it can be seen on the right picture the object's corners, such as the large direction sign, are warped. This happens usually while driving when the car hits potholes or experiences other sudden and strong movements. Due to the image generation line by line the image gets distorted.
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/resize_two_imgs.JPG">
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/resize_two_img.JPG">
 
 #### Contrast
 
