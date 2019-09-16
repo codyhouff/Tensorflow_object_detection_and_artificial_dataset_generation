@@ -108,15 +108,37 @@ Elastic distortion is a very interesting alteration of the pictures. As it can b
 
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/results_multiple_images.JPG">
 
-### Generate csv file
+#### Generate csv file
 
 With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
 
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/csv_file_pic4.jpg">
 
-# 2. Neural Networks
+# 2. Generate TF records
 
 For this, two neural networks were taken into account. "Faster_R-CNN_Inception_V2_COCO" and "SSD_Mobilenet_COCO" both neural networks are pretrained on the COCO dataset that includes thousands of pictures with labels from everyday situations, such as humans, cars, trees, airplanes, etc. (http://cocodataset.org/#home)[6]. Yet both differ strongly.
+
+# 3. Train
+
+With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
+
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/csv_file_pic4.jpg">
+
+
+# 4. Tensorboard
+
+With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
+
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/csv_file_pic4.jpg">
+
+# 5. Export inference graph
+
+With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
+
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/csv_file_pic4.jpg">
+
+
+
 
 ## Faster R-CNN
 
