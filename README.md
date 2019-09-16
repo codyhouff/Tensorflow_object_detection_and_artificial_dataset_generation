@@ -94,7 +94,7 @@ Elastic distortion is a very interesting alteration of the pictures. As it can b
 
 The function is very simple as it just alters the contrast of the image. The idea behind this is again improving the robustness of the trained model. Different contrasts occur usually in different lightning situations and the image quality of the used camera.
 
-<img width="1489" alt="bildschirmfoto 2018-11-19 um 12 37 33" src="https://user-images.githubusercontent.com/34514578/48686784-d69f9700-ebf8-11e8-9310-a25ff12050d3.png">
+<img width="1489" alt="bildschirmfoto 2018-11-19 um 12 37 33" src="results/images_for_readme/contrast_two_imgs.JPG">
 
 #### Color
 
