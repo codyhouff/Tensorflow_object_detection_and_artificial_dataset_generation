@@ -11,9 +11,9 @@ The motivation for this project lays both personal interest in a better understa
 # Table of Contents
 
 1. Setup
-* <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
-* Find front images
-* Prepare front images
+    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
+    * Find front images
+    * Prepare front images
 
 
 1. Gathering and Analysing Data 
