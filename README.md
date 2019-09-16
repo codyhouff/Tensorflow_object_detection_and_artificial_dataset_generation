@@ -64,7 +64,7 @@ As not every class holds the same number of objects it becomes necessary to impl
 
 Rotation is a simple function that allows to generate variance in the dataset. It needs to be ensured that the rotation is not to strong but somewhere between 10 and -10 degrees. Elsewise traffic signs may have a different meaning. This is also the reason why the rotate function of tensorflow can't be used as it only allows rotations at 90, 180 and 270 degrees.
 
-<img width="1512" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="https://user-images.githubusercontent.com/34514578/48686783-d2737980-ebf8-11e8-922f-c64c057fc0cb.png">
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/rotate_two_imgs.JPG">
 
 #### Zoom
 
