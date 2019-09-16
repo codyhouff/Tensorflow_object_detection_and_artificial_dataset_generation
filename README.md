@@ -72,11 +72,11 @@ Rotation is a simple function that allows to generate variance in the dataset. I
 
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/brightness_two_imgs.JPG">
 
-#### Zoom
+#### Relocate
 
 The Zoom function is rather simple and lays focus on a different part of the picture. Yet the size of the image remains the same. The main advantage lays in a variance of quality and the relative strong change of objects in the overall image. 
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 48 06" src="https://user-images.githubusercontent.com/34514578/48686910-9a206b00-ebf9-11e8-8268-483f30d155f4.png">
+<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 48 06" src="results/images_for_readme/relocate_two_imgs.JPG">
 
 #### Stretch
 
