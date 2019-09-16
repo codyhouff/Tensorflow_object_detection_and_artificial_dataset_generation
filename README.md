@@ -30,7 +30,10 @@ The motivation for this project lays both personal interest in a better understa
 
 ### Find front images
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/signs_front_all.JPG">
+<p align="center">
+  <img width="700" img src="results/images_for_readme/signs_front_all.JPG">
+</p>
+
 
 ### Prepare front images
     
