@@ -2,7 +2,7 @@
 I reversed engineered the TensorFlow Object Detection API to make it easier to use, much simplier, and added voice. I created a artificial dataset generator which saves 100s of hours by avoiding having to find and label by hand, 1000s of images.
 
 <p align="center">
-  <img src="results/images_for_readme/2_signs_edited.png">
+  <img src="results/images_for_readme/2_signs_edited2.png">
 </p>
 
 # Motivation
