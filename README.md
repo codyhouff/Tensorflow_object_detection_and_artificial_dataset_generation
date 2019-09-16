@@ -1,5 +1,10 @@
 # Tensorflow object detection and artificial dataset generation
 I reversed engineered the TensorFlow Object Detection API to make it easier to use, much simplier, and added voice. I created a artificial dataset generator which saves 100s of hours by avoiding having to find and label by hand, 1000s of images.
+
+<p align="center">
+  <img src="results/images_for_readme/pic7_edited.png" width=676 height=450>
+</p>
+
 # Motivation
 The motivation for this project lays both personal interest in a better understanding for object detection and academic research. The goal is to develop a foundation for a road-sign-detection (RSD) with the option to add further objects or functions to it. The ultimate goal is to have a useable object detection for the automotive sector.
 
