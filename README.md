@@ -42,7 +42,7 @@ download the config file that matches the model from <a href='https://github.com
     
     .
     ├── training                                #training folder
-        ├── ssd_mobilenet_v1_pets.config        #put the config file herer
+        ├── ssd_mobilenet_v1_pets.config        #put the config file here
         ├── object-detection.pbtxt              
 
 ### Find front images
