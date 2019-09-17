@@ -23,8 +23,8 @@ The motivation for this project lays both personal interest in a better understa
 3. Train 
 4. Tensorboard
 5. Export inference graph
-6. run model on images in jupyter notebook
-7. run model on webcam 
+6. Run Model on Images in Jupyter Notebook
+7. Run Model on Webcam 
 
 # 0. Setup
 ### Tensorflow-gpu Installation
@@ -171,34 +171,16 @@ With this a fairly large database was generated including 50.000 labels on appro
   <img width="700" img src="results/images_for_readme/csv.jpg">
 </p>
 
-# 5. Export inference graph
+# 6. Run Model on Images in Jupyter Notebook
+
+# 7. Run Model on Webcam
 
 
 
-# 4. Results
-
-The results need to be distinguished in multiple ways. Such as accuracy and the kind of failures that occur. Over the entire model we reached an accuracy of about 85% of the road signs, with the camera close to the object. Which is well above the initial expectations for this research topic. The failures that occur in object-detection can be separated into tour different modes. Those will be described quickly, as a starting point for further readings into the subject.
-
-#### True-Positive
-
-The object detector correctly identifies an object. Hence, this is the result we are seeking for and no failure occured. In the case of this object detection this result became more reliable the closer the road sign was. ![sign1](https://user-images.githubusercontent.com/34514578/51392469-1559bb00-1b70-11e9-8799-46f090e8c65e.jpg)
+# Results
 
 
-#### False-Positive
-
-A false positive detection appears when a sign is marked incorrectly. Incorrectly marked signs usually occur if those are too small, so for example in a large distance. The other main reason is an insufficient amount of labels, saved in the database. ![falsepositive](https://user-images.githubusercontent.com/34514578/51392446-fe1acd80-1b6f-11e9-8c5b-a344e45467b3.jpg). This is especially important, as completely wrong detections can be hard to understand and to solve in many cases and sometimes even relate to issues within the label-database. Luckily this model doesn't suffer much from it. Usually high thresholds also ensure the limitation of true-negative detections. 
-
-#### True-Negative
-
-True negative detections are by definition not very spectacular, yet important. In this case the detector correctly doesn't give out any kind of result.
-
-#### False-Negative
-
-The opposite to true-negative are false-negative detections. In this case a sign or object is just missed by the detector. Also, often relating to low amounts of labels in the dataset. In this particular case we also see the limits of the faster-RCNN as shown in the picture below. While the "stop"-sign on the right and the "bus-stop"-sign are detected correctly, the "stop"-sign at the upper edge of the image is missed by the object detector. In this case the stop-sign is not at a common place but at a very usual space. The RCNN misses that due to its focus on common sizes and positions for the initial choice of regions to be analysed afterwards.
-
-![nostop](https://user-images.githubusercontent.com/34514578/51392458-0a068f80-1b70-11e9-8178-c0395abd82e1.jpg)
-
-# 5. Outlook
+# Outlook
 
 The object-detection still needs further improvements in many cases. It is yet not accurate enough nor does the speed match our demands. As this was archived within a term-paper, it is still a strong start for further improvements. Those will include the database as well as tests with other neural networks such as YOLO. Furthermore, reinforced learning needs to be taken into account.
 
