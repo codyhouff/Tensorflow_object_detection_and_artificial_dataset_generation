@@ -29,7 +29,7 @@ The motivation for this project lays both personal interest in a better understa
 
 
 ### Find front images
-
+I chose street signs, but it can be anything.
 <p align="center">
   <img width="500" img src="results/images_for_readme/signs_front_all.JPG">
 </p>
@@ -48,13 +48,6 @@ You must remove the background. I used: https://www.remove.bg
 
 The first step to take was to define the road signs and objects for the database. The database builds up on the RUB ["German Traffic Sign Database"][1], therefore the objects in the database used in the repository are similar pictures of everyday traffic situations in Germany. In order to build the database that would be able to detect a larger amount of road signs it was necessary to label a much larger number of pictures. The goal was to distinguish between more than 150 road signs, traffic lights and more than 15 physical objects such as pedestrians, cars and motorcycles.
 
-### Extracting Single Images from Videos
-
-In the second step the pictures needed to be generated and labelled. In order to generate the pictures a simple command-line tool was developed that allows videos to be read in and extract those frame by frame. In the tool it is possible to alternate the number of frames taken. For highway footage every 5th frame was taken, while for urban footage the number of extracted frames was set to every 15th frame.
-
-### Labeling Images
-
-The Images were labeled with the open-source tool LabelImg for Windows [2]. In order to ensure that the images will be labeled correctly numbers were used as labels, these will be later translated back to descriptions of the object. The use of numbers reduces the likeliness of typos in the labeling process. 
 
 ### Analysing the Labels
 
@@ -66,23 +59,8 @@ As real-life traffic situations are used as input of the process the dataset nee
         ├── labels              #xml location folder
         
 
-##### Export of Classes
 
-This function allows the export of single or multiple classes from the database as a ZIP-file. It allows users to build models that either exceed a certain number of images in the database or to limit the database to certain kinds of objects. The function allows for example to extract only road signs with a speed limit but no other road signs or objects. During the export a CSV-file is generated and added within the ZIP-file to ensure the content of exported class is correct. The ZIP holds images as (PNG-files) as well as labels (XML-files)
-
-##### Generate CSV-File for Dataset
-
-Another function is the generation of CSV files. CSV files are used as the basic input file for most training processes, containing the path of the images files together with their label and ROI. The fuctions selects all images with the selected classes and searches for the corresponding xml label file to write one entry into the resulting csv.
-
-##### Generate Diagram for Dataset
-
-A very basic matplotlib graph to visualize the different classes exsisting in the dataset, together with their frequenzy relative to the whole dataset. These plots can be great to gather an initial intuition of how the dataset is structured but become fast confusing when too many different classes are present in the dataset.
-
-
-##### Remove Empty Images
-Validates if the dataset contains images without a corresponding xml label file to references it and deletes them. The ulterior motive is to remove images without any street sign or object present, that might have slipped through the labeling process.
-
-### Data Augmentation
+### Generate Training Images
 
 As not every class holds the same number of objects it becomes necessary to implement a data augmentation process. With this, existing pictures are alternated in such way that these can be used again in the learning process. For the augmentation the Python library "augmentor.py" [3] by the MIT is used. The tool has a large amount of functions implemented of which those useable for road sign detection are shown below. Some of these are only applayble to certain classes.
 
@@ -176,14 +154,6 @@ With this a fairly large database was generated including 50.000 labels on appro
 </p>
 
 
-
-
-
-## Faster R-CNN
-
-The Faster R-CNN is an evolution of the convolutional neural network approach. In order to accelerate this, a focus was laid on the faster recognition of areas of interest in an image. This focus on the regions (that is what the "R" stands for in R-CNN) made it much easier to check a limited amount of objects in a picture. This was then accelerated with "Fast-" and "Faster R-CNN". For further readings we recommend the papers of Ross Girshick as one of the main people behind it. Faster R-CNN is able to read data in basically every size which doesn't make it necessary to crop the pictures before or in Tensorflow.
-
-The advantage of this neural network is, that Faster R-CNN is relatively accurate, also with small datasets, with little examples per class. Yet it still takes about 50ms to analyse an image. Depending on the use case this might be too slow, such as for live deployment in a car.
 
 ## SSD_Mobilenet_COCO
 
