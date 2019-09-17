@@ -30,7 +30,7 @@ The motivation for this project lays both personal interest in a better understa
 # Setup
 ### Tensorflow-gpu Installation
 Install Tensorflow-gpu. Tutorial available <a href='https://www.tensorflow.org/install/gpu'>here</a><br> 
-or youtube tensorflow-gpu installation
+or youtube tensorflow-gpu installation.
 Download Tensorflow dependencies <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>here</a><br> and other dependencies: 
 ```
 pip install Cython
