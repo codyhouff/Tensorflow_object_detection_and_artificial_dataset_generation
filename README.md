@@ -12,10 +12,10 @@ The motivation for this project lays both personal interest in a better understa
 
 0. Setup
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
-    * download a model 
-    * download a config file
-    * Find front images
-    * Prepare front images
+    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download a Model</a><br>
+    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download a Config File</a><br>
+    * Find Front Images
+    * Prepare Front Images
 
 
 1. Generate Training Images and csv file 
