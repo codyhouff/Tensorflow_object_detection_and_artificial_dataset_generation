@@ -117,8 +117,8 @@ item {
 }
 etc...
 ```
-### Get test images and put them in a folder in test images 
-
+### Get some test images and put them in a folder in test images 
+save images as: image1.jpg, image2.jpg, etc
     .
     ├── test_images             
         ├── street_signs	# folder containing street signs test images
@@ -170,7 +170,11 @@ trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464" 
 output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph
 ```
 
-### Edit _5_export_inference_graph.py
+### Edit _6_run_model_jupyter_notebook.ipynb
+```
+
+```
+### Edit _7_run_model_webcam.py
 
 
 
@@ -276,7 +280,6 @@ With this a fairly large database was generated including 50.000 labels on appro
 # 6. Run Model on Images in Jupyter Notebook
 
 # 7. Run Model on Webcam
-
 
 
 # Results
