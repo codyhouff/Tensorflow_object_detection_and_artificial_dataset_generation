@@ -28,17 +28,17 @@ The motivation for this project lays both personal interest in a better understa
 
 # 0. Setup
 ### Tensorflow-gpu Installation
-Install Tensorflow-gpu: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md or youtube tensorflow-gpu installation
+Install Tensorflow-gpu. Tutorial available <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>here</a><br> or youtube tensorflow-gpu installation
 
 ### download a model 
-download from: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md I used the ssd_mobilenet_v1_coco model.
+download model from <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>here</a><br> I used the ssd_mobilenet_v1_coco model.
 
     .
     ├── models                                #models folder containing the models
         ├── ssd_mobilenet_v1_coco model       #put the model folder here 
 
 ### download a config file 
-download the config file that matches the model: https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs 
+download the config file that matches the model from <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>here</a><br>
     
     .
     ├── training                                #training folder
