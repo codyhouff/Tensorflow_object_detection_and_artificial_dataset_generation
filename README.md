@@ -12,6 +12,8 @@ The motivation for this project lays both personal interest in a better understa
 
 0. Setup
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
+    * download a model 
+    * download a config file  
     * Find front images
     * Prepare front images
 
@@ -26,7 +28,13 @@ The motivation for this project lays both personal interest in a better understa
 
 # 0. Setup
 ### Tensorflow-gpu Installation
+Install Tensorflow-gpu: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md or youtube tensorflow-gpu installation
 
+### download a model 
+download from: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md I used the ssd_mobilenet_v1_coco model.
+
+### download a config file
+download the config file that matches the model: https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs 
 
 ### Find front images
 I chose street signs, but it can be anything.
@@ -34,15 +42,12 @@ I chose street signs, but it can be anything.
   <img width="500" img src="results/images_for_readme/signs_front_all.JPG">
 </p>
 
-
 ### Prepare front images
 You must remove the background. I used: https://www.remove.bg
 
 <p align="center">
   <img width="500" img src="results/images_for_readme/remove_background1.jpg">
 </p>
-
-    
 
 # 1. Generate Training Images and csv file 
 
