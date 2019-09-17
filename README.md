@@ -11,11 +11,11 @@ The motivation for this project lays both personal interest in a better understa
 # Table of Contents
 
 0. Setup
-    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
+    * <a href='https://www.tensorflow.org/install/gpu'>Tensorflow-gpu Installation</a><br>
     * Find Front Images
     * Prepare Front Images        
-    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download</a><br> a Model
-    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download</a><br>and Edit a Config File
+    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download a Model</a><br>
+    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download and Edit a Config File</a><br>
     * Edit Config File and Object-detection.pbtxt File
 
 
@@ -29,7 +29,11 @@ The motivation for this project lays both personal interest in a better understa
 
 # Setup
 ### Tensorflow-gpu Installation
-Install Tensorflow-gpu. Tutorial available <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>here</a><br> or youtube tensorflow-gpu installation
+Install Tensorflow-gpu. Tutorial available <a href='https://www.tensorflow.org/install/gpu'>here</a><br> or youtube tensorflow-gpu installation
+Download Tensorflow dependencies <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>here</a><br> and other dependencies: 
+```
+
+```
 
 ### Find front images
 I chose street signs, but it can be anything.
@@ -98,6 +102,7 @@ item {
 }
 etc...
 ```
+### Edit config file and object-detection.pbtxt file
 
 # 1. Generate Training Images and csv file 
 
