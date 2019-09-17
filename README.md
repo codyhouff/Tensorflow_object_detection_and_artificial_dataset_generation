@@ -139,30 +139,28 @@ def class_text_to_int(row_label):    # make sure to use the same numbers to clas
         return 2
     elif row_label == 'interstate_sign':
         return 3
-    elif row_label == 'no_u_turn_sign':
-        return 4
-    elif row_label == 'railroad_crossing_sign':
-        return 5
-    elif row_label == 'speed_limit_sign':
-        return 6
-    elif row_label == 'stop_sign':
-        return 7
-    elif row_label == 'street_name_sign':
-        return 8
-    elif row_label == 'yield_sign':
-        return 9
+    etc........
     else:
         None
-
 ```
 ### Edit _3_train.py
 ```
 train_dir = "training/training_results"                         # path for output folder with the train data
-pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"  # path to the config file
 
+pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"  # path to the config file
 ```
 ### Edit _4_tensorboard.py
+```
+tensorboard_link = "http://LAPTOP-M6D3SOR6:6006/" # link to tensorboard, your personal link will be on the cmd prompt 
 
+training_directory = "training/"                  # path to the folders where train iteration info goes
+```
+### Edit _5_export_inference_graph.py
+```
+pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"                      # path to config file
+trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing,                                                                                         # choose one with a low loss
+output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph
+```
 
 # 1. Generate Training Images and csv file 
 
