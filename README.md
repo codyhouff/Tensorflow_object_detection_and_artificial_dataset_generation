@@ -155,7 +155,6 @@ With this a fairly large database was generated including 50.000 labels on appro
   <img width="700" img src="results/images_for_readme/csv_file_pic4.jpg">
 </p>
 
-
 # 4. Tensorboard
 
 With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
@@ -169,33 +168,12 @@ With this a fairly large database was generated including 50.000 labels on appro
 With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
 
 <p align="center">
-  <img width="700" img src="results/images_for_readme/csv_file_pic4.jpg">
+  <img width="700" img src="results/images_for_readme/csv.jpg">
 </p>
 
+# 5. Export inference graph
 
 
-## SSD_Mobilenet_COCO
-
-SSD_Mobilenet is focused stronger on fast image detection. This means, that the results are less reliable, but it can be deployed on live feeds at 30fps and also has much lower hardware requirements. All in all, the findings were fairly weak especially with small amounts of data it was almost impossible to generate reliable output.
-
-For SSD_Mobilenet the file dimensions are limited to 300x300 images. If changes are made to this in Tensorflow, the model doesn't detect anything, which can be very frustrating. Though it is possible to use the same workflow as described before. Various tools allow to cut out the pixel within the bounding boxes of the labels. With this the 300x300 image size is not as much of a restriction anymore. 
-
-For this project the Faster-RCNN was chosen as the goal was develop a road-sign detection that reliably analyses a large amount of existing video data in order to improve the database that comes with it. Hence, the focus laid more on quality than on speed.
-
-# 3. Using TensorFlow
-
-For the object detection model Google's tensorflow was used running on 2 GeForce GTX 1080Ti with each 11GB of Vram. The processor is an Intel 8700K and 32GB of Ram. For the installation and set-up of the environment the tutorial by EdjeElectronics [4] was used. The tutorial gives a great introduction and makes it easy to set up the anaconda environment and tensorflow itself. Furthermore, it includes already all the necessary information on how to use your own dataset with TensorFlow. This includes generating the tf.record files, labelmap.pbtxt, ... 
-For the training it is recommended to check the Tensorflow Model Zoo [5] on GitHub and apply the models to your own code. For this project Faster_RCNN_InceptionV2_COCO seemed to be the best fit. If everything was set up correctly the training is started by the following command in the anaconda prompt:
-
-    python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_coco_A.config --num_clones=2 --ps_tasks=1
-    
-It should be emphasised that the last two commands `--num_clones=2 --ps_tasks=1` are necessary for the use with multiple GPUs. The "num_clones" states the number of GPUs in use. If only one GPU is used the command for the anaconda prompt is 
-
-    python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_coco_A.config
-    
-The time to train depends strongly on the model. In this case the training times took approximately 10-12 days. In the chart it can be seen that after a strong decline in the beginning the loss maintained at a low level. The following image shows the training process of the road sign detection. ![graphsign](https://user-images.githubusercontent.com/34514578/51392448-ff4bfa80-1b6f-11e9-9ae7-4d1e097a1d3f.jpg)
-
-All in all, three models were trained. One for road sign detection, one for object detection and a combination of those two. The result can be seen below. The first image shows the result of the road sign detection, while the second image shows the outcome of the object detection. ![sign2](https://user-images.githubusercontent.com/34514578/51392471-15f25180-1b70-11e9-9564-4a990036e6eb.jpg) ![object1](https://user-images.githubusercontent.com/34514578/51392461-0bd05300-1b70-11e9-94ca-04511c1355e7.jpg)
 
 # 4. Results
 
