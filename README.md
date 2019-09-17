@@ -36,6 +36,11 @@ The motivation for this project lays both personal interest in a better understa
 
 
 ### Prepare front images
+
+<p align="center">
+  <img width="700" img src="results/images_for_readme/remove_background1.jpg">
+</p>
+
     
 
 # 1. Generate Training Images and csv file 
