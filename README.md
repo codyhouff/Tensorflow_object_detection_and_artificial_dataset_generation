@@ -14,10 +14,9 @@ The motivation for this project lays both personal interest in a better understa
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
     * Find Front Images
     * Prepare Front Images        
-    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download a Model</a><br>
-    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download and Edit a Config File </a><br>
+    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download</a><br>  a Model
+    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download</a><br> and Edit a Config File
     * Edit Config File and Object-detection.pbtxt File
-
 
 
 1. Generate Training Images and csv file 
@@ -39,7 +38,7 @@ I chose street signs, but it can be anything.
 </p>
 
 ### Prepare front images
-You must remove the background. I used: https://www.remove.bg
+You must remove the background. I used: https://www.remove.bg.
 Then name the picture the name of the object class
 
 <p align="center">
@@ -69,6 +68,7 @@ download the config file that matches the model from <a href='https://github.com
 
 ### Edit config file and object-detection.pbtxt file
 
+Edit these lines in the config file in the train folder 
 ```
 num_classes: 9					    # number of different objects the model will detect
 	
