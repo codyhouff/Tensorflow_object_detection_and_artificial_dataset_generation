@@ -31,14 +31,14 @@ The motivation for this project lays both personal interest in a better understa
 ### Find front images
 
 <p align="center">
-  <img width="700" img src="results/images_for_readme/signs_front_all.JPG">
+  <img width="500" img src="results/images_for_readme/signs_front_all.JPG">
 </p>
 
 
 ### Prepare front images
 
 <p align="center">
-  <img width="700" img src="results/images_for_readme/remove_background1.jpg">
+  <img width="500" img src="results/images_for_readme/remove_background1.jpg">
 </p>
 
     
