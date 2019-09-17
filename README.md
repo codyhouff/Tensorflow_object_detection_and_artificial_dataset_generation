@@ -117,25 +117,59 @@ item {
 }
 etc...
 ```
-### Edit config file and object-detection.pbtxt file
+### Edit _1_generate_training_images.py
+```
+background_directory = "backgrounds/(799)_medium/"  # path to backgrounds, (799) means 799 images per class of object 
+
+images_directory = "images/"                       # output path to the test and train image folder
+
+front_directory = "front/street_signs/"            # path to the front object images 
+```
+### Edit _2_generate_tfrecord.py
+```
+path_to_csv = "data/"                # path to train test and train csv files
+path_to_images = "images/"           # path to test and train image folders
+output_path_record = "data/"         # output path for test and train record files
+
+# TO-DO replace this with label map  # change names of object classes to the ones you are using
+def class_text_to_int(row_label):    # make sure to use the same numbers to classes as in the object-detection.pbtxt file 
+    if row_label == 'dead_end_sign':
+        return 1
+    elif row_label == 'do_not_enter_sign':
+        return 2
+    elif row_label == 'interstate_sign':
+        return 3
+    elif row_label == 'no_u_turn_sign':
+        return 4
+    elif row_label == 'railroad_crossing_sign':
+        return 5
+    elif row_label == 'speed_limit_sign':
+        return 6
+    elif row_label == 'stop_sign':
+        return 7
+    elif row_label == 'street_name_sign':
+        return 8
+    elif row_label == 'yield_sign':
+        return 9
+    else:
+        None
+
+```
+### Edit _3_train.py
+```
+train_dir = "training/training_results"                         # path for output folder with the train data
+pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"  # path to the config file
+
+```
+### Edit _4_tensorboard.py
+
 
 # 1. Generate Training Images and csv file 
 
 The first step to take was to define the road signs and objects for the database. The database builds up on the RUB ["German Traffic Sign Database"][1], therefore the objects in the database used in the repository are similar pictures of everyday traffic situations in Germany. In order to build the database that would be able to detect a larger amount of road signs it was necessary to label a much larger number of pictures. The goal was to distinguish between more than 150 road signs, traffic lights and more than 15 physical objects such as pedestrians, cars and motorcycles.
 
 
-### Analysing the Labels
-
-As real-life traffic situations are used as input of the process the dataset needs to be reviewed and analysed regularly. Therefore, another tool was developed (DataSetCLI.py) to manage the large amounts of data. The tool offers multiple options for the database. All functions require a path to the root folder of your data, which should contain only images and xml-label files.
-
-    .
-    ├── root Data               #Root folder containing the data
-        ├── images              #images location folder
-        ├── labels              #xml location folder
-        
-
-
-### Generate Training Images
+### Add variance to the images
 
 As not every class holds the same number of objects it becomes necessary to implement a data augmentation process. With this, existing pictures are alternated in such way that these can be used again in the learning process. For the augmentation the Python library "augmentor.py" [3] by the MIT is used. The tool has a large amount of functions implemented of which those useable for road sign detection are shown below. Some of these are only applayble to certain classes.
 
