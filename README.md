@@ -68,8 +68,8 @@ download the config file that matches the model from <a href='https://github.com
         ├── object-detection.pbtxt              # edit 
 
 ### Edit config file and object-detection.pbtxt file
-Edit these lines in the config file in the training folder:
-'''
+
+```
 num_classes: 9					    # number of different objects the model will detect
 	
 fine_tune_checkpoint: "models/ssd_mobilenet_v1_coco_2018_01_28/model.ckpt" # path to the model
@@ -83,10 +83,10 @@ num_examples: 972				    # num of training images in the images/train folder aft
 input_path: "data/test.record"                      # path to the test.record file
 
 label_map_path: "training/object-detection.pbtxt"   # path to the pbtxt file
-'''
+```
 
 Then edit the object-detection.pbtxt file in the training folder to list all the objects:
-'''
+```
 item {
   id: 1
   name: 'dead_end_sign'
@@ -97,7 +97,7 @@ item {
   name: 'do_not_enter_sign'
 }
 etc...
-'''
+```
 
 # 1. Generate Training Images and csv file 
 
