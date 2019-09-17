@@ -12,10 +12,12 @@ The motivation for this project lays both personal interest in a better understa
 
 0. Setup
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
-    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download a Model</a><br>
-    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download a Config File</a><br>
     * Find Front Images
-    * Prepare Front Images
+    * Prepare Front Images        
+    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download a Model</a><br>
+    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download and Edit a Config File </a><br>
+    * Edit Config File and Object-detection.pbtxt File
+
 
 
 1. Generate Training Images and csv file 
@@ -26,24 +28,9 @@ The motivation for this project lays both personal interest in a better understa
 6. Run Model on Images in Jupyter Notebook
 7. Run Model on Webcam 
 
-# 0. Setup
+# Setup
 ### Tensorflow-gpu Installation
 Install Tensorflow-gpu. Tutorial available <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>here</a><br> or youtube tensorflow-gpu installation
-
-### download a model 
-download model from <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>here</a><br> I used the ssd_mobilenet_v1_coco model.
-
-    .
-    ├── models                                # models folder containing the models
-        ├── ssd_mobilenet_v1_coco model       # put the model folder here 
-
-### download a config file 
-download the config file that matches the model from <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>here</a><br>
-    
-    .
-    ├── training                                # training folder
-        ├── ssd_mobilenet_v1_pets.config        # put the config file here
-        ├── object-detection.pbtxt              
 
 ### Find front images
 I chose street signs, but it can be anything.
@@ -53,6 +40,7 @@ I chose street signs, but it can be anything.
 
 ### Prepare front images
 You must remove the background. I used: https://www.remove.bg
+Then name the picture the name of the object class
 
 <p align="center">
   <img width="500" img src="results/images_for_readme/remove_background1.jpg">
@@ -62,6 +50,54 @@ You must remove the background. I used: https://www.remove.bg
     ├── front                                # models folder containing the models
         ├── street_signs                     # put the front street sign images in here
         ├── new folder                       # or if its another class of object, put the images in here
+
+
+### Download a model 
+download model from <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>here</a><br> I used the ssd_mobilenet_v1_coco model.
+
+    .
+    ├── models                                # models folder containing the models
+        ├── ssd_mobilenet_v1_coco model       # put the model folder here 
+
+### Download a config file 
+download the config file that matches the model from <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>here</a><br>
+    
+    .
+    ├── training                                # training folder
+        ├── ssd_mobilenet_v1_pets.config        # put the config file here and edit
+        ├── object-detection.pbtxt              # edit 
+
+### Edit config file and object-detection.pbtxt file
+Edit these lines in the config file in the training folder:
+'''
+num_classes: 9					    # number of different objects the model will detect
+	
+fine_tune_checkpoint: "models/ssd_mobilenet_v1_coco_2018_01_28/model.ckpt" # path to the model
+
+input_path: "data/train.record"			    # path to the train.record file
+
+label_map_path: "training/object-detection.pbtxt    # path to the pbtxt file
+
+num_examples: 972				    # num of training images in the images/train folder after generating the images
+
+input_path: "data/test.record"                      # path to the test.record file
+
+label_map_path: "training/object-detection.pbtxt"   # path to the pbtxt file
+'''
+
+Then edit the object-detection.pbtxt file in the training folder to list all the objects:
+'''
+item {
+  id: 1
+  name: 'dead_end_sign'
+}
+
+item {
+  id: 2
+  name: 'do_not_enter_sign'
+}
+etc...
+'''
 
 # 1. Generate Training Images and csv file 
 
