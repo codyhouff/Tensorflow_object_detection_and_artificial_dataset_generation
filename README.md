@@ -36,6 +36,7 @@ The motivation for this project lays both personal interest in a better understa
 
 
 ### Prepare front images
+You must remove the background. I used: https://www.remove.bg
 
 <p align="center">
   <img width="500" img src="results/images_for_readme/remove_background1.jpg">
