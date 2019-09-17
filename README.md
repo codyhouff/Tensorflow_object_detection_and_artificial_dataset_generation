@@ -117,13 +117,21 @@ item {
 }
 etc...
 ```
+### Get test images and put them in a folder in test images 
+
+    .
+    ├── test_images             
+        ├── street_signs	# folder containing street signs test images
+        ├── new folder          # new folder containing test images 
+
+
 ### Edit _1_generate_training_images.py
 ```
 background_directory = "backgrounds/(799)_medium/"  # path to backgrounds, (799) means 799 images per class of object 
 
-images_directory = "images/"                       # output path to the test and train image folder
+images_directory = "images/"                        # output path to the test and train image folder
 
-front_directory = "front/street_signs/"            # path to the front object images 
+front_directory = "front/street_signs/"             # path to the front object images 
 ```
 ### Edit _2_generate_tfrecord.py
 ```
@@ -158,9 +166,13 @@ training_directory = "training/"                  # path to the folders where tr
 ### Edit _5_export_inference_graph.py
 ```
 pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"                      # path to config file
-trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing,                                                                                         # choose one with a low loss
+trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing, choose one with a low loss
 output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph
 ```
+
+### Edit _5_export_inference_graph.py
+
+
 
 # 1. Generate Training Images and csv file 
 
