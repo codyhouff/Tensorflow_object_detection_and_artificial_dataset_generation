@@ -34,15 +34,15 @@ Install Tensorflow-gpu. Tutorial available <a href='https://github.com/tensorflo
 download model from <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>here</a><br> I used the ssd_mobilenet_v1_coco model.
 
     .
-    ├── models                                #models folder containing the models
-        ├── ssd_mobilenet_v1_coco model       #put the model folder here 
+    ├── models                                # models folder containing the models
+        ├── ssd_mobilenet_v1_coco model       # put the model folder here 
 
 ### download a config file 
 download the config file that matches the model from <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>here</a><br>
     
     .
-    ├── training                                #training folder
-        ├── ssd_mobilenet_v1_pets.config        #put the config file here
+    ├── training                                # training folder
+        ├── ssd_mobilenet_v1_pets.config        # put the config file here
         ├── object-detection.pbtxt              
 
 ### Find front images
@@ -57,6 +57,11 @@ You must remove the background. I used: https://www.remove.bg
 <p align="center">
   <img width="500" img src="results/images_for_readme/remove_background1.jpg">
 </p>
+
+    .
+    ├── front                                # models folder containing the models
+        ├── street_signs                     # put the front street sign images in here
+        ├── new folder                       # or if its another class of object, put the images in here
 
 # 1. Generate Training Images and csv file 
 
