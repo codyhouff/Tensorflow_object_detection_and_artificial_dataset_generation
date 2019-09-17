@@ -14,8 +14,8 @@ The motivation for this project lays both personal interest in a better understa
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
     * Find Front Images
     * Prepare Front Images        
-    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download</a><br>  a Model
-    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download</a><br> and Edit a Config File
+    * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download</a><br> a Model
+    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download</a><br>and Edit a Config File
     * Edit Config File and Object-detection.pbtxt File
 
 
