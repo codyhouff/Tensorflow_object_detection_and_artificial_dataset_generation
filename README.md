@@ -13,7 +13,7 @@ The motivation for this project lays both personal interest in a better understa
 0. Setup
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md'>Tensorflow-gpu Installation</a><br>
     * download a model 
-    * download a config file  
+    * download a config file
     * Find front images
     * Prepare front images
 
@@ -32,9 +32,16 @@ Install Tensorflow-gpu: https://github.com/tensorflow/models/blob/master/researc
 
 ### download a model 
 download from: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md I used the ssd_mobilenet_v1_coco model.
+  
+  ├── models                              #models folder containing the models
+      ├── ssd_mobilenet_v1_coco model     #put the model folder here
 
-### download a config file
+### download a config file 
 download the config file that matches the model: https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs 
+
+  ├── training                              #training folder
+      ├── ssd_mobilenet_v1_pets.config      #put the config file here
+      ├── object-detection.pbtxt           
 
 ### Find front images
 I chose street signs, but it can be anything.
