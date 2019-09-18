@@ -104,7 +104,7 @@ download the config file that matches the model from <a href='https://github.com
 
 ### Edit files below if necessary
 
-#### Edit config file and object-detection.pbtxt file
+#### Edit config file and object-detection.pbtxt file (if necessary)
 
 Edit these lines in the config file in the train folder 
 ```
@@ -138,7 +138,7 @@ etc...
 ```
 
 
-#### Edit _1_generate_training_images.py
+#### Edit _1_generate_training_images.py (if necessary)
 ```
 background_directory = "backgrounds/(799)_medium/"  # path to backgrounds, (799) means 799 images per class of object 
 
@@ -146,7 +146,7 @@ images_directory = "images/"                        # output path to the test an
 
 front_directory = "front/street_signs/"             # path to the front object images 
 ```
-#### Edit _2_generate_tfrecord.py
+#### Edit _2_generate_tfrecord.py (if necessary)
 ```
 path_to_csv = "data/"                # path to train test and train csv files
 path_to_images = "images/"           # path to test and train image folders
@@ -164,19 +164,19 @@ def class_text_to_int(row_label):    # make sure to use the same numbers to clas
     else:
         None
 ```
-#### Edit _3_train.py
+#### Edit _3_train.py (if necessary)
 ```
 train_dir = "training/training_results"                         # path for output folder with the train data
 
 pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"  # path to the config file
 ```
-#### Edit _4_tensorboard.py
+#### Edit _4_tensorboard.py (if necessary)
 ```
 tensorboard_link = "http://LAPTOP-M6D3SOR6:6006/" # link to tensorboard, your personal link will be on the cmd prompt 
 
 training_directory = "training/"                  # path to the folders where train iteration info goes
 ```
-#### Edit _5_export_inference_graph.py
+#### Edit _5_export_inference_graph.py (if necessary)
 ```
 pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"                      # path to config file
 
@@ -184,7 +184,7 @@ trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464" 
 
 output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph
 ```
-#### Edit _6_run_model_jupyter_notebook.ipynb
+#### Edit _6_run_model_jupyter_notebook.ipynb (if necessary)
 ```
 MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
 
@@ -192,7 +192,7 @@ PATH_TO_TEST_IMAGES_DIR = 'test_images/street_signs'				     # path to test imag
 
 number_test_images = 18							             # number of images in the test_images folder
 ```
-#### Edit _7_run_model_webcam.py
+#### Edit _7_run_model_webcam.py (if necessary)
 ```
 MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
 ```
@@ -268,13 +268,20 @@ Successfully created the test TFRecords: data/test.record
 ```
 
 # 3. Train
+Takes the train.record, test.record, train images, the config file, the pbtxt file, the model and saves checkpoints in a folder in training. One of these checkpoints will be chosen to create the inference graph. If it works correctly it will display the following:
 
-<p align="center">
-  <img width="700" img src="results/images_for_readme/csv_file_pic4.jpg">
-</p>
+```
+I0918 03:27:00.565701 26700 learning.py:507] global step 1: loss = 47.7762 (11.987 sec/step)
+I0918 03:27:01.375576 26700 learning.py:507] global step 2: loss = 41.2166 (0.634 sec/step)
+I0918 03:27:02.020375 26700 learning.py:507] global step 3: loss = 36.5167 (0.643 sec/step)
+I0918 03:27:02.670631 26700 learning.py:507] global step 4: loss = 34.1669 (0.646 sec/step)
+I0918 03:27:03.316424 26700 learning.py:507] global step 5: loss = 31.5301 (0.643 sec/step)
+I0918 03:27:03.965198 26700 learning.py:507] global step 6: loss = 29.6940 (0.647 sec/step)
+I0918 03:27:04.600069 26700 learning.py:507] global step 7: loss = 27.4882 (0.633 sec/step)
+```
 
 # 4. Tensorboard
-
+Click on the _4_tensorboard.py file to  
 <p align="center">
   <img width="700" img src="results/images_for_readme/graph_tensorboard2.JPG">
 </p>
