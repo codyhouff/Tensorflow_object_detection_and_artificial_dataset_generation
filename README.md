@@ -10,7 +10,7 @@ The motivation for this project lays both personal interest in a better understa
 
 # Table of Contents
 
-0. Setup
+Setup
     * <a href='https://www.tensorflow.org/install/gpu'>Tensorflow-gpu Installation</a><br>
     * Find Front Images
     * Prepare Front Images        
