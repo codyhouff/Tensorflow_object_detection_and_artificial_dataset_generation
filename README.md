@@ -119,6 +119,7 @@ etc...
 ```
 ### Get some test images and put them in a folder in test images 
 save images as: image1.jpg, image2.jpg, etc
+
     .
     ├── test_images             
         ├── street_signs	# folder containing street signs test images
