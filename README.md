@@ -6,7 +6,7 @@ I reversed engineered the TensorFlow Object Detection API to make it easier to u
 </p>
 
 # Motivation
-The motivation for this project lays both personal interest in a better understanding for object detection and academic research. The goal is to develop a foundation for a road-sign-detection (RSD) with the option to add further objects or functions to it. The ultimate goal is to have a useable object detection for the automotive sector.
+The current Tensorflow object detection from github is increadibly unorganized and time consuming to use. You have to go through 20+ steps each time you want to train and use a model. The most time consuming part is probably finding the training images and labeling each one of them by hand. It becomes impractical once the number of classes reach more than five. Say for each class you have 800 training images, thats 4000 images you have to label by hand!
 
 # Table of Contents
 
