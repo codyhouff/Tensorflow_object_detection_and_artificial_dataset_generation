@@ -281,21 +281,30 @@ I0918 03:27:04.600069 26700 learning.py:507] global step 7: loss = 27.4882 (0.63
 ```
 
 # 4. Tensorboard
-Click on the _4_tensorboard.py file to  
+Click on the _4_tensorboard.py file to open tensorboard and visualize the data.
+
 <p align="center">
   <img width="700" img src="results/images_for_readme/graph_tensorboard2.JPG">
 </p>
 
 # 5. Export inference graph
-
-<p align="center">
-  <img width="700" img src="results/images_for_readme/csv.jpg">
-</p>
+Takes the config file, and checkpoint ex: "model.ckpt-45464" and creates a inference graph in the inference graphs folder. You must chose a checkpoint based on tensorboard and iteration. Try to wait till the total loss in the tensorboard graph is below 1.
+```
+trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing, choose one with a low loss
+```
 
 # 6. Run Model on Images in Jupyter Notebook
+Make sure the MODEL_NAME in the _6_run_model_jupyter_notebook.ipynb is the path to the correct inference graph. 
 
+```
+MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
+```
 # 7. Run Model on Webcam
+Make sure the MODEL_NAME in the _7_run_model_webcam.py is the path to the correct inference graph. 
 
+```
+MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
+```
 
 # Results
 
