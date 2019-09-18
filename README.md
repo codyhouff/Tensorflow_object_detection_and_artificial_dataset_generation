@@ -196,13 +196,13 @@ As not every class holds the same number of objects it becomes necessary to impl
 
 #### Rotate
 
-Rotation is a simple function that allows to generate variance in the dataset. It needs to be ensured that the rotation is not to strong but somewhere between 10 and -10 degrees. Elsewise traffic signs may have a different meaning. This is also the reason why the rotate function of tensorflow can't be used as it only allows rotations at 90, 180 and 270 degrees.
+Rotates the front image a random amount between -15 to 15 degrees.
 
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/rotate_two_imgs.JPG">
 
 #### Brightness
 
-Rotation is a simple function that allows to generate variance in the dataset. It needs to be ensured that the rotation is not to strong but somewhere between 10 and -10 degrees. Elsewise traffic signs may have a different meaning. This is also the reason why the rotate function of tensorflow can't be used as it only allows rotations at 90, 180 and 270 degrees.
+Darkens or lightens the front image a random amount between 10% to 130%. Also darkens or lightens the background a random amount.
 
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/brightness_two_imgs.JPG">
 
