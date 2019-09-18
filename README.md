@@ -21,7 +21,6 @@ The motivation for this project lays both personal interest in a better understa
     	* Edit Config File and Object-detection.pbtxt File
 	* Edit 
 
-Run program
 1. Generate Training Images and csv file 
 2. Create TF records
 3. Train 
