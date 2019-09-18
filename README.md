@@ -200,10 +200,7 @@ MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)
 
 
 # 1. Generate Training Images and csv file 
-Generates artificial training images and a csv file that contains the bounding box location and the class of the object. 
-
-### Add variance to the images
-This is to make the model more robust and able to handle images with poor lighting or bad angles. 
+Generates artificial training images and a csv file that contains the bounding box location and the class of the object. Also Variance is added to each image, this is to make the model more robust and able to handle images with poor lighting or bad angles.
 
 #### Rotate
 
@@ -249,31 +246,28 @@ Changes the contrast of the front and backgrond image randomly between 10% to 20
 
 ### Results
 
-Elastic distortion is a very interesting alteration of the pictures. As it can be seen on the right picture the object's corners, such as the large direction sign, are warped. This happens usually while driving when the car hits potholes or experiences other sudden and strong movements. Due to the image generation line by line the image gets distorted.
-
 <p align="center">
   <img width="500" img src="results/images_for_readme/results_gif1.gif">
 </p>
 
 ### Generate csv file
 
-With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
-
+Creates a train and test csv file that contains the bounding box location and the class of the object. Located in the data
+file.
 <p align="center">
   <img width="700" img src="results/images_for_readme/csv_file_pic4.jpg">
 </p>
 
 # 2. Generate TF records
 
-For this, two neural networks were taken into account. "Faster_R-CNN_Inception_V2_COCO" and "SSD_Mobilenet_COCO" both neural networks are pretrained on the COCO dataset that includes thousands of pictures with labels from everyday situations, such as humans, cars, trees, airplanes, etc. (http://cocodataset.org/#home)[6]. Yet both differ strongly.
+Takes the train csv, test csv, train images, test images, and creates a test.record and a train.record. If it works correctly it will display the following:
 
-<p align="center">
-  <img width="700" img src="results/images_for_readme/csv_file_pic4.jpg">
-</p>
+```
+Successfully created the train TFRecords: data/train.record
+Successfully created the test TFRecords: data/test.record
+```
 
 # 3. Train
-
-With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
 
 <p align="center">
   <img width="700" img src="results/images_for_readme/csv_file_pic4.jpg">
