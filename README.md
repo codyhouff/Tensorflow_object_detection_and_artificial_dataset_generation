@@ -167,17 +167,23 @@ training_directory = "training/"                  # path to the folders where tr
 ### Edit _5_export_inference_graph.py
 ```
 pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"                      # path to config file
+
 trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing, choose one with a low loss
+
 output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph
 ```
-
 ### Edit _6_run_model_jupyter_notebook.ipynb
 ```
+MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
 
+PATH_TO_TEST_IMAGES_DIR = 'test_images/street_signs'				     # path to test images
+
+number_test_images = 18							             # number of images in the test_images folder
 ```
 ### Edit _7_run_model_webcam.py
-
-
+```
+MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
+```
 
 # 1. Generate Training Images and csv file 
 
