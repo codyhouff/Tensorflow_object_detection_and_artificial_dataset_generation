@@ -196,13 +196,10 @@ MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)
 ```
 
 # 1. Generate Training Images and csv file 
-
-The first step to take was to define the road signs and objects for the database. The database builds up on the RUB ["German Traffic Sign Database"][1], therefore the objects in the database used in the repository are similar pictures of everyday traffic situations in Germany. In order to build the database that would be able to detect a larger amount of road signs it was necessary to label a much larger number of pictures. The goal was to distinguish between more than 150 road signs, traffic lights and more than 15 physical objects such as pedestrians, cars and motorcycles.
-
+Generates artificial training images and a csv file that contains the bounding box location and the class of the object. 
 
 ### Add variance to the images
-
-As not every class holds the same number of objects it becomes necessary to implement a data augmentation process. With this, existing pictures are alternated in such way that these can be used again in the learning process. For the augmentation the Python library "augmentor.py" [3] by the MIT is used. The tool has a large amount of functions implemented of which those useable for road sign detection are shown below. Some of these are only applayble to certain classes.
+This is to make the model more robust and able to handle images with poor lighting or bad angles. 
 
 #### Rotate
 
@@ -218,7 +215,7 @@ Darkens or lightens the front image a random amount between 10% to 130%. Also da
 
 #### Relocate
 
-The Zoom function is rather simple and lays focus on a different part of the picture. Yet the size of the image remains the same. The main advantage lays in a variance of quality and the relative strong change of objects in the overall image. 
+Relocates the front image randomly on the background image. 
 
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 48 06" src="results/images_for_readme/relocate_two_imgs.JPG">
 
