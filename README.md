@@ -10,13 +10,16 @@ The motivation for this project lays both personal interest in a better understa
 
 # Table of Contents
 
-Setup
+0. Setup
     * <a href='https://www.tensorflow.org/install/gpu'>Tensorflow-gpu Installation</a><br>
     * Find Front Images
-    * Prepare Front Images        
+    * Prepare Front Images
+    * Get Test Images
     * <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Download a Model</a><br>
-    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download and Edit a Config File</a><br>
-    * Edit Config File and Object-detection.pbtxt File
+    * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download a Config File</a><br>
+    * Edit Files Below if Necessary
+    	* Edit Config File and Object-detection.pbtxt File
+	* Edit 
 
 
 1. Generate Training Images and csv file 
@@ -69,6 +72,13 @@ Then name the picture the name of the object class
         ├── street_signs                     # put the front street sign images in here
         ├── new folder                       # or if its another class of object, put the images in here
 
+### Get some test images and put them in a folder in test images 
+save images as: image1.jpg, image2.jpg, etc
+
+    .
+    ├── test_images             
+        ├── street_signs	# folder containing street signs test images
+        ├── new folder          # new folder containing test images 
 
 ### Download a model 
 download model from <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>here</a><br> I used the ssd_mobilenet_v1_coco model.
@@ -85,7 +95,9 @@ download the config file that matches the model from <a href='https://github.com
         ├── ssd_mobilenet_v1_pets.config        # put the config file here and edit
         ├── object-detection.pbtxt              # edit 
 
-### Edit config file and object-detection.pbtxt file
+### Edit files below if necessary
+
+#### Edit config file and object-detection.pbtxt file
 
 Edit these lines in the config file in the train folder 
 ```
@@ -117,16 +129,9 @@ item {
 }
 etc...
 ```
-### Get some test images and put them in a folder in test images 
-save images as: image1.jpg, image2.jpg, etc
-
-    .
-    ├── test_images             
-        ├── street_signs	# folder containing street signs test images
-        ├── new folder          # new folder containing test images 
 
 
-### Edit _1_generate_training_images.py
+#### Edit _1_generate_training_images.py
 ```
 background_directory = "backgrounds/(799)_medium/"  # path to backgrounds, (799) means 799 images per class of object 
 
@@ -134,7 +139,7 @@ images_directory = "images/"                        # output path to the test an
 
 front_directory = "front/street_signs/"             # path to the front object images 
 ```
-### Edit _2_generate_tfrecord.py
+#### Edit _2_generate_tfrecord.py
 ```
 path_to_csv = "data/"                # path to train test and train csv files
 path_to_images = "images/"           # path to test and train image folders
@@ -152,19 +157,19 @@ def class_text_to_int(row_label):    # make sure to use the same numbers to clas
     else:
         None
 ```
-### Edit _3_train.py
+#### Edit _3_train.py
 ```
 train_dir = "training/training_results"                         # path for output folder with the train data
 
 pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"  # path to the config file
 ```
-### Edit _4_tensorboard.py
+#### Edit _4_tensorboard.py
 ```
 tensorboard_link = "http://LAPTOP-M6D3SOR6:6006/" # link to tensorboard, your personal link will be on the cmd prompt 
 
 training_directory = "training/"                  # path to the folders where train iteration info goes
 ```
-### Edit _5_export_inference_graph.py
+#### Edit _5_export_inference_graph.py
 ```
 pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"                      # path to config file
 
@@ -172,7 +177,7 @@ trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464" 
 
 output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph
 ```
-### Edit _6_run_model_jupyter_notebook.ipynb
+#### Edit _6_run_model_jupyter_notebook.ipynb
 ```
 MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
 
@@ -180,7 +185,7 @@ PATH_TO_TEST_IMAGES_DIR = 'test_images/street_signs'				     # path to test imag
 
 number_test_images = 18							             # number of images in the test_images folder
 ```
-### Edit _7_run_model_webcam.py
+#### Edit _7_run_model_webcam.py
 ```
 MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
 ```
