@@ -19,13 +19,13 @@ The motivation for this project lays both personal interest in a better understa
     * <a href='https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs'>Download a Config File</a><br>
     * Edit Files Below if Necessary
     	* Edit Config File and Object-detection.pbtxt File
-	* Edit _1_generate_training_images.py
-	* Edit _2_generate_tfrecord.py
-	* Edit _3_train.py
-	* Edit _4_tensorboard.py
-	* Edit _5_export_inference_graph.py
-	* Edit _6_run_model_jupyter_notebook.ipynb
-	* Edit _7_run_model_webcam.py
+    	* Edit _1_generate_training_images.py
+    	* Edit _2_generate_tfrecord.py
+    	* Edit _3_train.py
+    	* Edit _4_tensorboard.py
+    	* Edit _5_export_inference_graph.py
+    	* Edit _6_run_model_jupyter_notebook.ipynb
+    	* Edit _7_run_model_webcam.py
 
 1. Generate Training Images and csv file 
 2. Create TF records
