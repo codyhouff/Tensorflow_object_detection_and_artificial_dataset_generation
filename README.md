@@ -35,6 +35,8 @@ The motivation for this project lays both personal interest in a better understa
 6. Run Model on Images in Jupyter Notebook
 7. Run Model on Webcam 
 
+
+
 # Setup
 ### Tensorflow-gpu Installation
 Install Tensorflow-gpu. Tutorial available <a href='https://www.tensorflow.org/install/gpu'>here</a><br> 
@@ -195,6 +197,8 @@ number_test_images = 18							             # number of images in the test_images
 MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)'    # path to inference graph
 ```
 
+
+
 # 1. Generate Training Images and csv file 
 Generates artificial training images and a csv file that contains the bounding box location and the class of the object. 
 
@@ -205,41 +209,41 @@ This is to make the model more robust and able to handle images with poor lighti
 
 Rotates the front image a random amount between -15 to 15 degrees.
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/rotate_two_imgs.JPG">
+<img width="1555" src="results/images_for_readme/rotate_two_imgs.JPG">
 
 #### Brightness
 
 Darkens or lightens the front image a random amount between 10% to 130%. Also darkens or lightens the background a random amount.
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 35 27" src="results/images_for_readme/brightness_two_imgs.JPG">
+<img width="1555" src="results/images_for_readme/brightness_two_imgs.JPG">
 
 #### Relocate
 
 Relocates the front image randomly on the background image. 
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 48 06" src="results/images_for_readme/relocate_two_imgs.JPG">
+<img width="1555" src="results/images_for_readme/relocate_two_imgs.JPG">
 
 #### Stretch
 
-Stretch is useable for many different directions. It includes horizontal and vertical shearing as well as shearing to each of the corners. The function augments the data in such way as it would result if another picture was taken seconds later. It also makes the trained model more robust towards different angles.
+20% chance for a random amount of verticle stretch, 20% chance for a random amount of horizontal stretch, and 60% chance for no change.
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 40 54" src="results/images_for_readme/stretch_two_imgs.JPG">
+<img width="1555" src="results/images_for_readme/stretch_two_imgs.JPG">
 
 #### Resize
 
-Elastic distortion is a very interesting alteration of the pictures. As it can be seen on the right picture the object's corners, such as the large direction sign, are warped. This happens usually while driving when the car hits potholes or experiences other sudden and strong movements. Due to the image generation line by line the image gets distorted.
+Resize the front image randomly between 30% to 6%.
 
-<img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/resize_two_img.JPG">
+<img width="1555" src="results/images_for_readme/resize_two_img.JPG">
 
 #### Contrast
 
-The function is very simple as it just alters the contrast of the image. The idea behind this is again improving the robustness of the trained model. Different contrasts occur usually in different lightning situations and the image quality of the used camera.
+Changes the contrast of the front and backgrond image randomly between 10% to 200% 
 
-<img width="1489" alt="bildschirmfoto 2018-11-19 um 12 37 33" src="results/images_for_readme/contrast_two_imgs.JPG">
+<img width="1489" src="results/images_for_readme/contrast_two_imgs.JPG">
 
 #### Color
 
-Elastic distortion is a very interesting alteration of the pictures. As it can be seen on the right picture the object's corners, such as the large direction sign, are warped. This happens usually while driving when the car hits potholes or experiences other sudden and strong movements. Due to the image generation line by line the image gets distorted.
+Changes the contrast of the front and backgrond image randomly between 10% to 200%
 
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/color_two_imgs.JPG">
 
