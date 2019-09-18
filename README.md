@@ -245,7 +245,7 @@ Changes the contrast of the front and backgrond image randomly between 10% to 20
 <img width="1555" alt="bildschirmfoto 2018-11-19 um 12 38 58" src="results/images_for_readme/color_two_imgs.JPG">
 
 ### Results
-
+Sample of the images that are generated.
 <p align="center">
   <img width="500" img src="results/images_for_readme/results_gif1.gif">
 </p>
@@ -275,15 +275,11 @@ Successfully created the test TFRecords: data/test.record
 
 # 4. Tensorboard
 
-With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
-
 <p align="center">
   <img width="700" img src="results/images_for_readme/graph_tensorboard2.JPG">
 </p>
 
 # 5. Export inference graph
-
-With this a fairly large database was generated including 50.000 labels on approximately 35.000 images. As the objects, that were to be labelled, changed later on, the number of labels will keep growing rapidly. This will be done on the existing image database of 35.000 samples. An example of the database is presented below. 
 
 <p align="center">
   <img width="700" img src="results/images_for_readme/csv.jpg">
