@@ -311,14 +311,7 @@ MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)
 
 # Outlook
 
-The object-detection still needs further improvements in many cases. It is yet not accurate enough nor does the speed match our demands. As this was archived within a term-paper, it is still a strong start for further improvements. Those will include the database as well as tests with other neural networks such as YOLO. Furthermore, reinforced learning needs to be taken into account.
-
-For further questions please refer to our LinkedIn profiles (that you can find in our profiles), contact us here on GitHub. We also appreciate if you leave a comment. 
+For further questions please refer to my LinkedIn profile or contact us here on GitHub. 
 
 # List of Refrences
-[1]http://benchmark.ini.rub.de/?section=gtsdb&subsection=news
-[2]https://github.com/tzutalin/labelImg
-[3]https://augmentor.readthedocs.io
-[4]https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10/blob/master/README.md
-[5]https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
-[6] http://cocodataset.org/#home
+[1]https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
