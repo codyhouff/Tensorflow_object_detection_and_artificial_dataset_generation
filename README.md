@@ -182,7 +182,7 @@ pipeline_config_path = "training/ssd_mobilenet_v1_pets.config"                  
 
 trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing, choose one with a low loss
 
-output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph
+output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_4"  # path to output inference graph and choose the name of the graph
 ```
 #### Edit _6_run_model_jupyter_notebook.ipynb (if necessary)
 ```
@@ -275,7 +275,7 @@ Don't forget to change the num_examples to the number of images in the images/tr
 num_examples: 972	# num of training images in the images/train folder after generating the images
 ```
 
-If it works correctly it will display the following:
+If it works correctly it will eventually display something like this:
 ```
 I0918 03:27:00.565701 26700 learning.py:507] global step 1: loss = 47.7762 (11.987 sec/step)
 I0918 03:27:01.375576 26700 learning.py:507] global step 2: loss = 41.2166 (0.634 sec/step)
@@ -297,6 +297,7 @@ Click on the _4_tensorboard.py file to open tensorboard and visualize the data.
 Takes the config file, and checkpoint ex: "model.ckpt-45464" and creates a inference graph in the inference graphs folder. You must chose a checkpoint based on tensorboard and iteration. Try to wait till the total loss in the tensorboard graph is below 1.
 ```
 trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing, choose one with a low loss
+output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_new"  # path to output inference graph and choose the name of the graph
 ```
 
 # 6. Run Model on Images in Jupyter Notebook
