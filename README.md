@@ -268,8 +268,14 @@ Successfully created the test TFRecords: data/test.record
 ```
 
 # 3. Train
-Takes the train.record, test.record, train images, the config file, the pbtxt file, the model and saves checkpoints in a folder in training. One of these checkpoints will be chosen to create the inference graph. If it works correctly it will display the following:
+Takes the train.record, test.record, train images, the config file, the pbtxt file, the model and saves checkpoints in a folder in training. One of these checkpoints will be chosen to create the inference graph. 
 
+Don't forget to change the num_examples to the number of images in the images/train folder.
+```
+num_examples: 972	# num of training images in the images/train folder after generating the images
+```
+
+If it works correctly it will display the following:
 ```
 I0918 03:27:00.565701 26700 learning.py:507] global step 1: loss = 47.7762 (11.987 sec/step)
 I0918 03:27:01.375576 26700 learning.py:507] global step 2: loss = 41.2166 (0.634 sec/step)
