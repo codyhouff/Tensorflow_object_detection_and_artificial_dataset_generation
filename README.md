@@ -296,8 +296,8 @@ Click on the _4_tensorboard.py file to open tensorboard and visualize the data.
 # 5. Export inference graph
 Takes the config file, and checkpoint ex: "model.ckpt-45464" and creates a inference graph in the inference graphs folder. You must chose a checkpoint based on tensorboard and iteration. Try to wait till the total loss in the tensorboard graph is below 1.
 ```
-trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"     # path to a model checkpoint of your choosing, choose one with a low loss
-output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_3(old)"  # path to output inference graph and choose the name of the graph
+trained_checkpoint_prefix = "training/training_results_3(old)/model.ckpt-45464"           # path to a model checkpoint of your choosing, choose one with a low loss
+output_directory = "inference_graphs/stop_sign_generated_images_inference_graph_3(old)"   # path to output inference graph and choose the name of the graph
 ```
 
 # 6. Run Model on Images in Jupyter Notebook
