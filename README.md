@@ -287,7 +287,7 @@ I0918 03:27:04.600069 26700 learning.py:507] global step 7: loss = 27.4882 (0.63
 ```
 
 # 4. Tensorboard
-Click on the _4_tensorboard.py file to open tensorboard and visualize the data.
+Click on the _4_tensorboard.py file to open tensorboard and visualize the data. Look at the Total loss.
 
 <p align="center">
   <img width="700" img src="results/images_for_readme/graph_tensorboard2.JPG">
