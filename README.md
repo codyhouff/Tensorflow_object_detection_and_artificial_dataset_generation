@@ -206,7 +206,7 @@ Generates artificial training images and a csv file that contains the bounding b
 
 Rotates the front image a random amount between -15 to 15 degrees.
 
-<img width="1555" src="results/images_for_readme/rotate_two_imgs.JPG">
+<img width="400" src="results/images_for_readme/rotate_two_imgs.JPG">
 
 #### Brightness
 
