@@ -316,9 +316,6 @@ MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)
 # Results
 
 
-# Outlook
+
 
 For further questions please refer to my LinkedIn profile or contact us here on GitHub. 
-
-# List of Refrences
-[1]
