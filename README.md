@@ -10,7 +10,7 @@ The current Tensorflow object detection from github is increadibly unorganized a
 
 # Table of Contents
 
-0. <a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Setup</a><br>
+0. <a href='results/images_for_readme/README.md'>Setup</a><br>
 1. Generate Training Images and csv file 
 2. Create TF records
 3. Train 
@@ -20,7 +20,7 @@ The current Tensorflow object detection from github is increadibly unorganized a
 7. Run Model on Webcam 
 
 # 0. Setup
-<a href='https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md'>Click Here for Setup</a><br>
+<a href='results/images_for_readme/README.md'>Click Here for Setup</a><br>
 
 # 1. Generate Training Images and csv file 
 Generates artificial training images and a csv file that contains the bounding box location and the class of the object. Also Variance is added to each image, this is to make the model more robust and able to handle images with poor lighting or bad angles.
