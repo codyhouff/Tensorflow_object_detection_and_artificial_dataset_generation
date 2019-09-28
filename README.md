@@ -315,7 +315,13 @@ MODEL_NAME = 'inference_graphs/stop_sign_generated_images_inference_graph_3(old)
 
 # Results
 
+<p align="center">
+  <img width="700" img src="results/images_for_readme/stop_sign_live.gif">
+</p>
 
+<p align="center">
+  <img width="700" img src="results/images_for_readme/stop_sign_live.gif">
+</p>
 
 
 For further questions please refer to my LinkedIn profile or contact us here on GitHub. 
