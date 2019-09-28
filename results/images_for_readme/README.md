@@ -41,7 +41,7 @@ pip install cv2
 ### Find front images
 I chose street signs, but it can be anything.
 <p align="center">
-  <img width="500" img src="results/images_for_readme/signs_front_all.JPG">
+  <img width="500" img src="signs_front_all.JPG">
 </p>
 
 ### Prepare front images
@@ -49,7 +49,7 @@ You must remove the background. I used: https://www.remove.bg.
 Then name the picture the name of the object class
 
 <p align="center">
-  <img width="500" img src="results/images_for_readme/remove_background1.jpg">
+  <img width="500" img src="remove_background1.jpg">
 </p>
 
     .
