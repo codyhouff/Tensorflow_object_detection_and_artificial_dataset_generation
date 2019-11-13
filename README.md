@@ -1,5 +1,5 @@
 # Tensorflow object detection and artificial dataset generation
-I reversed engineered the TensorFlow Object Detection API to make it easier to use, much simplier, and added voice. I also created a artificial dataset generator which saves 100s of hours by avoiding having to find and label by hand, 1000s of images. Instead it can generate and label 1000s of artificial images in seconds.
+I reversed engineered the TensorFlow Object Detection code to make it easier to use, much simplier, and added voice. I also created an artificial dataset generator which saves 100s of hours by avoiding having to find and label by hand, 1000s of images. Instead it can generate and label 1000s of artificial images in seconds.
 
 <p align="center">
   <img width="700" img src="results/images_for_readme/top_two_imgs.JPG">
